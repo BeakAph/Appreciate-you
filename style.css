@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: url('Paper_background.png') center/cover no-repeat;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* PHOTO FRAME */
+
+.photo-frame {
+    width: 340px;
+    padding: 18px 18px 70px;
+
+    background: url('Paper_container.png') center;
+    background-size: auto;
+
+    position: absolute;
+
+    /* CENTER ALL DIVS */
+    top: 50%;
+    left: 50%;
+
+    text-align: center;
+
+    cursor: grab;
+    user-select: none;
+}
+
+.photo-frame:active {
+    cursor: grabbing;
+}
+
+/* OPTIONAL ROTATION */
+
+.frame1 {
+    rotate: -4deg;
+}
+
+.frame2 {
+    rotate: 3deg;
+}
+
+/* IMAGE */
+
+.photo-frame img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 4px;
+
+    pointer-events: none;
+}
+
+/* CAPTION */
+
+.caption {
+    position: absolute;
+
+    bottom: 22px;
+    left: 0;
+
+    width: 100%;
+
+    font-size: 18px;
+    color: #5a4634;
+    font-weight: bold;
+
+    pointer-events: none;
+}
+
+/* NOTES */
+
+.photo-frame.empty {
+    width: auto;
+    height: auto;
+
+    padding: 22px 26px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag-note {
+    font-size: 32px;
+    font-weight: bold;
+
+    color: #6b4f3d;
+
+    pointer-events: none;
+
+    white-space: nowrap;
+}
+
+/* DRAGGABLE PNG */
+
+.draggable-image {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 120px;
+
+    cursor: grab;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+}
+
+.draggable-image:active {
+    cursor: grabbing;
+}

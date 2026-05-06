@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gift To You</title>
+
+    <style>
+
+            body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: url('Paper_background.png') center/cover no-repeat;
+        font-family: Arial, sans-serif;
+        position: relative;
+        }
+
+        .photo-frame {
+            position: absolute;
+
+            top: 35%;
+            left: 30%;
+
+            width: 340px;
+            padding: 18px 18px 70px;
+
+            background: url('Paper_container.png') center;
+            background-size: auto;
+
+            text-align: center;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .photo-frame:active {
+            cursor: grabbing;
+        }
+
+        .frame1 {
+            top: 18%;
+            left: 18%;
+            transform: rotate(-4deg);
+        }
+
+        .frame2 {
+            top: 45%;
+            left: 55%;
+            transform: rotate(3deg);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 22px;
+            left: 0;
+            width: 100%;
+            font-size: 18px;
+            color: #5a4634;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        .photo-frame.text {
+            width: auto;
+            height: auto;
+            padding: 22px 26px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-frame.text .drag-note {
+            font-size: 32px;
+            font-weight: bold;
+            color: #6b4f3d;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .photo-frame.empty {
+            top: 20%;
+            left: 25%
+        }
+
+
+        .wall-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url('Paper_container.png') center;
+            pointer-events: none;
+        }
+
+        .draggable-image{
+            position: absolute;
+            width: 120px;
+            top: 50px;
+            left: 50px;
+            cursor: grab;
+            user-select: none;
+
+            -webkit-user-drag: none;
+        }
+
+        .draggable-image:active{
+            cursor: grabbing;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+    <img src="heart-png-31.png" class="draggable-image" draggable="false">
+
+    
+    <div class="photo-frame" style="left: 42%; top: 25%;">
+        <img src="cutie.png" alt="Special Memory">
+        <div class="caption">I made a christmas edition </div>
+    </div>
+
+
+    <div class="photo-frame" style="left: 42%; top: 25%;">
+        <img src="You_cutie.png" alt="Special Memory">
+        <div class="caption">One of the earlies camera calls we did :>></div>
+    </div>
+
+
+
+   <div class="photo-frame" style="left: 42%; top: 25%;">
+        <img src="washington_cuddle.jpg" alt="Special Memory">
+        <div class="caption">you cuddling washington</div>
+    </div>
+
+   <div class="photo-frame" style="left: 42%; top: 25%;">
+        <img src="Stardew_marriage.png" alt="Special Memory">
+        <div class="caption">When we got married</div>
+    </div>
+
+
+
+    <div class="photo-frame text">
+        <div class="drag-note"> These pictures are <br> a portion of the moments we have together :>></div>
+    </div>
+
+
+    <div class="photo-frame text">
+        <div class="drag-note"> Your voice reminds me of how comfy life could be and <br> I'm happy waking up to you is my norm </div>
+    </div>
+
+
+    <div class="photo-frame text">
+        <div class="drag-note"> ever since before you always made me feel loved. <br> even now I get happy when you talk, <br> your rants mean alot to me </div>
+    </div>
+
+    <div class="photo-frame empty" style="width: 900px; height: 400px;"></div>
+
+
+
+    <div class="photo-frame text">
+        <div class="drag-note">Thank you for being here with me <br>
+            since the begininng </div>
+    </div>
+
+
+    <div class="photo-frame text">
+        <div class="drag-note">Click and hold to move this note around </div>
+    </div>
+
+    
+
+
+
+
+
+<script src="logic.js"></script>
+
+</body>
+</html>
